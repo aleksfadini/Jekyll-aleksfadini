@@ -1,7 +1,23 @@
+
+- date: 10/20/2018
+  time: "18:00"
+  name: Quartet w/ Josiah Boornazian
+  location: Shrine, Harlem, NYC
+
+- date: 10/19/2018
+  time: "18:00"
+  name: Quartet w/ Josiah Boornazian
+  location: Silvana's, Harlem, NYC
+
 - date: 08/15/2018
   time: "20:00"
   name: Quartet w/ Josiah Boornazian
   location: Wynwood Yard, Miami, FL
+
+- date: 08/14/2018
+  time: "20:00"
+  name: Quartet w/ Josiah Boornazian
+  location: Neme Gastro Bar, Miami, FL
 
 - date: 08/11/2018
   time: "20:00"
@@ -17,6 +33,41 @@
   time: "20:00"
   name: Quartet w/ Josiah Boornazian
   location: Sunset Tavern, Miami, FL
+
+- date: 08/07/2018
+  time: "21:00"
+  name: Electronic Trio w/ Josiah Boornazian
+  location: Lagniappe, Miami, FL
+
+- date: 08/04/2018
+  time: "14:00"
+  name: Luke Markham Group
+  location: Branded Saloon, Brooklyn, NY
+
+- date: 07/28/2018
+  time: "14:00"
+  name: Luke Markham Group
+  location: Branded Saloon, Brooklyn, NY
+
+- date: 07/26/2018
+  time: "20:00"
+  name: Darrel Smith Trio + Jam Session
+  location: Rosebank Tavern, Staten Island, NY
+
+- date: 07/21/2018
+  time: "14:00"
+  name: Luke Markham Group
+  location: Branded Saloon, Brooklyn, NY
+
+- date: 07/19/2018
+  time: "21:00"
+  name: Darrel Smith Trio
+  location: 18th Ammendment, Staten Island, NY
+
+- date: 07/14/2018
+  time: "14:00"
+  name: Luke Markham Group
+  location: Branded Saloon, Brooklyn, NY
 
 - date: 07/08/2018
   time: "14:00"
