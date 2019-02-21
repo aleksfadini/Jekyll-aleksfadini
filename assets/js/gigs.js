@@ -211,6 +211,7 @@ var $clock = $('<div id="clockdiv"> Days: <span class="days"></span><br> Hours: 
 
            // if a gig is future...
     console.log("now",$now)
+    console.log("$gigDateFromArray",$gigDateFromArray)
     if ($now < $gigDateFromArray) {
         //...replace date with written format
         $(":nth-child(1)", $gigRows[i]).replaceWith("<td class='nobr'> "+ getDateWritten($gigArray[i])+ " </td>");
