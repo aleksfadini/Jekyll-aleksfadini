@@ -32,7 +32,7 @@ var $numberoffuturegigs = 0;
 
 // create an array with all the gigs: in this form gigArray[i]=[date,time, name, locatiion]
 for (i = 0; i < $totalGigs; i++) {
-      console.log('i=', i); 
+      console.log('i=', i);
       $gigArray[i]=[0,0,0,0];
       console.log('inizialized $gigArray[', i, ']', $gigArray[i]);
       var $date = $(":nth-child(1)", $gigRows[i]).text();
@@ -44,14 +44,14 @@ for (i = 0; i < $totalGigs; i++) {
       var $location = $(":nth-child(4)", $gigRows[i]).text();
       console.log(' $location for gig number',i,":", $location);
       $gigArray[i]=[$date,$time,$name,$location];
-      console.log(' $gigArray[',i,"]:", $gigArray[i]);       
+      console.log(' $gigArray[',i,"]:", $gigArray[i]);
 };
 
 
 
 var $str = $gigArray[0][0].concat($gigArray[0][1]);
 
-      console.log(' $str:', $str); 
+      console.log(' $str:', $str);
 var $dateinjs = new Date($str);
       console.log(' $dateinjs', $dateinjs);
 
@@ -61,11 +61,11 @@ gigDate = function (gigrow) {
   var $dateplustime = gigrow[0].concat(gigrow[1]);
   var $gigDate = new Date($dateplustime);
   return $gigDate;
-}; 
+};
 // (test)
 $try = gigDate($gigArray[0]);
 console.log(' $gigdatefunction $gigArray[0]', $try);
- 
+
 
 
 
@@ -146,8 +146,8 @@ var $pastGigsDiv = $( "<div id='pastshows'>  <h3> Past Shows </h3> <table> <tbod
 var $pastGigsTable = $pastGigsDiv.children()[1];
 var $pastGigsTbody = $(":nth-child(1)", $pastGigsTable);
 var $temppastshow = "";
-$( "#gigssection" ).append( $pastGigsDiv ); 
-$pastGigsDiv.hide(); 
+$( "#gigssection" ).append( $pastGigsDiv );
+$pastGigsDiv.hide();
 
 console.log(' $pastGigsDiv', $pastGigsDiv);
 console.log(' $pastGigsTable', $pastGigsTable);
@@ -186,11 +186,11 @@ function getTimeRemaining(endtime){
 var $clock = $('<div id="clockdiv"> Days: <span class="days"></span><br> Hours: <span class="hours"></span><br> Minutes: <span class="minutes"></span><br> Seconds: <span class="seconds"></span> </div>');
 
 // var $countDownDiv = $( "<div class='countdown'>  <h3> Countdown </h3> </div>" );
-// $countDownDiv.show(); 
+// $countDownDiv.show();
 
 
 
-  // cycle through every gig, 
+  // cycle through every gig,
 
 
 
@@ -207,9 +207,10 @@ var $clock = $('<div id="clockdiv"> Days: <span class="days"></span><br> Hours: 
     var $tempgigTime = getTimeWritten($gigArray[i]);
     var $tempgigName = ($gigArray[i][2]);
     var $tempgigLocation = ($gigArray[i][3]);
- 
+
 
            // if a gig is future...
+    console.log("now",$now)
     if ($now < $gigDateFromArray) {
         //...replace date with written format
         $(":nth-child(1)", $gigRows[i]).replaceWith("<td class='nobr'> "+ getDateWritten($gigArray[i])+ " </td>");
@@ -219,9 +220,9 @@ var $clock = $('<div id="clockdiv"> Days: <span class="days"></span><br> Hours: 
         $tempCountDownDiv[i] = $( "<div class='countdown'>"+ i +"  <h3> Countdown </h3> </div>" );
 
         console.log(        "$tempCountDownDiv[i]",$tempCountDownDiv[i]);
-        // $($gigRows[i]).append( $tempCountDownDiv[i] );  
+        // $($gigRows[i]).append( $tempCountDownDiv[i] );
         var $gigRowfirstchild= $(":nth-child(1)", $($gigRows[i]));
-          $($gigRowfirstchild).append( $tempCountDownDiv[i] );  
+          $($gigRowfirstchild).append( $tempCountDownDiv[i] );
           var $clockTime = getTimeRemaining(gigDate($gigArray[i]));
            var $clock = $('<div id="clockdiv'+i+'"> Days: <span class="days">'+ $clockTime.days +'</span><br> Hours: <span class="hours">'+ $clockTime.hours +'</span><br> Minutes: <span class="minutes">'+ $clockTime.hours +' </span><br> Seconds: <span class="seconds">'+ $clockTime.seconds +'</span> </div>');
            $tempCountDownDiv[i].append($clock);
@@ -230,7 +231,7 @@ var $clock = $('<div id="clockdiv"> Days: <span class="days"></span><br> Hours: 
       $numberoffuturegigs = ($numberoffuturegigs + 1);
     }
      else
-    { 
+    {
         // if a gig is past, generate the corresponding info...
         console.log('si in effetti va spostat a past, numero', i);
         $numberofpastgigs = ($numberofpastgigs + 1);
@@ -239,7 +240,7 @@ var $clock = $('<div id="clockdiv"> Days: <span class="days"></span><br> Hours: 
 
         console.log("details of gigs:",$tempgigDate, $tempgigTime, $tempgigName, $tempgigLocation);
 
-        $temppastshow = $("<tr>  <td class='nobr'>" + $tempgigDate + " </td> <td>" + $tempgigTime + " </td> <td>" + $tempgigName + "</td> <td>" + $tempgigLocation + " </td> </tr>"); 
+        $temppastshow = $("<tr>  <td class='nobr'>" + $tempgigDate + " </td> <td>" + $tempgigTime + " </td> <td>" + $tempgigName + "</td> <td>" + $tempgigLocation + " </td> </tr>");
         console.log("$temppastshow",$temppastshow);
         //... then move it to the past section
         $gigRows[i].remove();
@@ -263,11 +264,11 @@ if ( $numberofpastgigs > 0)
 else
   {
 
-  };    
+  };
 
 
 // Bind countdown on hover
-        
+
 
 setInterval(function(){
 
@@ -299,7 +300,7 @@ setInterval(function(){
 
 
 
-    //if pointer hovers on any $tr, 
+    //if pointer hovers on any $tr,
 
 
 
@@ -319,7 +320,7 @@ setInterval(function(){
 //else
   //{
 
- // };   
+ // };
 
 
 
@@ -327,7 +328,7 @@ setInterval(function(){
 
 
 console.log('updated $nextGigIndex', $nextGigIndex);
-          
+
 // Last, show the next gig in the "next gig" section (note: it should be added to the index page somehow, one day)
     // Append the "Next Gig Section"
     // Append the nextGig
