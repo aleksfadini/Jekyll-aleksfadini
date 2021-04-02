@@ -4,7 +4,7 @@ $(function() {
             $headerDiv = $bigHeader.outerHeight(true) || $littleHeader.outerHeight(true);
         $bottomOfHeader = $headerDiv;
 
-    console.log($headerDiv);
+//    console.log($headerDiv);
 // trying to make a splash screen
 
     var $window = $(window),
@@ -13,7 +13,7 @@ $(function() {
        $window.on('load', function() {
         window.setTimeout(function() {
           $('#banner .fadecard').addClass('invisible');
-        }, 1000);
+        }, 100);
       });
 
 // adding the button a little later
@@ -21,7 +21,7 @@ $(function() {
         window.setTimeout(function() {
           $('#subt').removeClass('invisiblestart1');
           $('#subt').addClass('visiblestart1');
-        }, 1500);
+        }, 300);
       });
 
 // adding the button a little later
@@ -31,7 +31,7 @@ $(function() {
           $('#newsbits').addClass('visiblestart2');
           $('#morearrow').removeClass('beforearrow');
           $('#morearrow').addClass('arrowcomesin');
-        }, 2500);
+        }, 500);
       });
 // scroll down when clicking on "more"
 

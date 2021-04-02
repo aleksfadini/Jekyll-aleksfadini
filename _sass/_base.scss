@@ -88,12 +88,16 @@ h1, h2, h3,  {
     letter-spacing: 0.225em;
     font-weight: $heavy-font-weight;
     line-height: 1em;
-    margin: 0 0 1em 0;
+    margin: 1em 1em 1em 1em;
     text-transform: uppercase;
+      text-shadow: 1px 1px 2px #333, 0 0 25px #ddd, 0 0 5px #aaa;
+
 
     h4, h5, h6 {
 
     font-weight: $base-font-weight;
+
+      text-shadow: 1px 1px 2px #333, 0 0 15px #ddd, 0 0 5px #aaa;
     }
 }
 
