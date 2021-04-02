@@ -4,53 +4,135 @@ title: Listen
 little-headerimage: /assets/images/piano.jpg
 permalink: /music
 ---
-<div class="inner wrapper">
-  <h2>Alessandro's Music</h2>
-  <p>Here are some excerpts available only on this website:</p>
-      
-      <hr/>
-      <div id="audiogallery">
+<section id="vismenufinal">
+	<div class="inner wrapper">
+		<div class="bio">
+			<h2>Discography</h2>
+			<h3>As Leader</h3>
+			<div class="table-wrapper discography">
+				<table>
+					<thead>
+						<tr>
+							<th></th>
+							<th></th>
+							<th></th>
+							<th></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><span class="discimg"><img src="/assets/images/dark1.jpg" alt="" /></span></td>
+							<td>Alessandro Fadini, "A Dark And Stormy Day"</td>
+							<td>Freshsound New Talent, 2016</td>
+							<td>
+								<div class="likebutton">
+									<a href="http://www.freshsoundrecords.com/alessandro-fadini/6444-a-dark-and-stormy-day.html"> purchase here </a>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<h3>As Sideman</h3>
+			<div class="table-wrapper discography">
+				<table>
+					<thead>
+						<tr>
+							<th></th>
+							<th></th>
+							<th></th>
+							<th></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><span class="discimg"><img src="/assets/images/yana2.jpg" alt="" /></span></td>
+							<td>Yana Bibb, "An Afternoon In Paris"</td>
+							<td>Dixiefrog, 2016</td>
+							<td>
+								<div class="likebutton"><a href="http://www.bluesweb.com/p_disque.php3?id_article=2286"> purchase here </a></div>
+							</td>
+						</tr>
+						<tr>
+							<td><span class="discimg"><img src="/assets/images/martino.jpg" alt="" /></span></td>
+							<td>Martino Dessi, "Distance"</td>
+							<td>Indie, 2016</td>
+							<td>
+								<div class="likebutton"><a href="http://www.martinodessi.com/"> purchase here</a></div>
+							</td>
+						</tr>
+						<tr>
+							<td><span class="discimg"><img src="/assets/images/yana1.jpg" alt="" /></span></td>
+							<td>Yana Bibb, "Not A Minute Too Late"</td>
+							<td>Dixiefrog, 2014</td>
+							<td>
+								<div class="likebutton"><a href="http://www.bluesweb.com/p_disque.php3?id_article=2112"> purchase here </a></div>
+							</td>
+						</tr>
+						<tr>
+							<td><span class="discimg"><img src="/assets/images/hucq.jpg" alt="" /></span></td>
+							<td>Julien Hucq, "Julien Hucq NYC Quartet"</td>
+							<td>Indie, 2014</td>
+							<td>
+								<div class="likebutton"><a href="http://julienhucq.net/"> purchase here </a></div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+	<hr/>
+	<div class="inner wrapper">
+		<h2>Exclusive Excerpts</h2>
+	<p>Here are some excerpts available only on this website:</p>
+	<div id="audiogallery">
 
-      {% for record in site.data.listen %}
+		{% for record in site.data.listen %}
 
-          <div class="albumtitle">
-          <h2>"{{ record.albumtitle }}"</h2>
-          <h3>{{ record.artist }}</h3>
-            <div class="album">
+		<div class="albumtitle">
+			<h2>"{{ record.albumtitle }}"</h2>
+			<h3>{{ record.artist }}</h3>
+			<div class="album">
 
-                <div class="personnel">
-                  <p>
-                    {% for musician in record.personnel %}
-                      {{ musician.name }} on {{ musician.axe }} <br>
-                    {% endfor %}
-                  </p>
-                <img src="/assets/images/{{ record.albumimg }}" width="200" alt="Peace EP">
-                </div>
+				<div class="personnel">
+					<p>
+						{% for musician in record.personnel %}
+						{{ musician.name }} on {{ musician.axe }} <br>
+						{% endfor %}
+					</p>
+					<img src="/assets/images/{{ record.albumimg }}" width="200" alt="Peace EP">
+				</div>
 
-                <div class="songs">
-                  {% for song in record.songs %}
-                    {% if song.play %}
-                      <p>"{{ song.title }}"</p>
-                      <div class="mp3player">
-                        <audio controls>
-                          <source src="assets/music/{{ song.src }}">
-                        </audio>
-                      </div>
-                    {% endif %}
-                  {% endfor %}
-                </div>
-            </div>
-          </div>
-        <hr />
-      {% endfor %}
+				<div class="songs">
+					{% for song in record.songs %}
+					{% if song.play %}
+					<p>"{{ song.title }}"</p>
+					<div class="mp3player">
+						<audio controls>
+							<source src="assets/music/{{ song.src }}">
+						</audio>
+					</div>
+					{% endif %}
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+		<hr />
+		{% endfor %}
 
-  <h3>Soundcloud</h3>
-  <p>You can listen to other excerpts on Soundcloud: </p><p><div class="likebutton"><a href="https://soundcloud.com/alessandro-fadini" class="icon fa-soundcloud"><span class="label">Take me to Soundcloud</span><p>Take me to Soundcloud</p></a></div></p>
+		<h3>Soundcloud</h3>
+		<p>You can listen to other excerpts on Soundcloud: </p>
+		<p>
+		<div class="likebutton"><a href="https://soundcloud.com/alessandro-fadini" class="icon fa-soundcloud"><span class="label">Take me to Soundcloud</span>
+				<p>Take me to Soundcloud</p>
+			</a></div>
+		</p>
 
-  <hr/>
-
-      
+		<hr />
 
 
 
-</div>
+
+
+	</div>
