@@ -8,7 +8,7 @@ permalink: /music
 	<div class="inner wrapper">
 		<div class="bio">
 			<h2>Discography</h2>
-			<h3>As Leader</h3>
+			<h3>As Leader / Co-Leader</h3>
 			<div class="table-wrapper discography">
 				<table>
 					<thead>
@@ -21,6 +21,18 @@ permalink: /music
 					</thead>
 					<tbody>
 						<tr>
+							<td><span class="discimg"><img src="/assets/images/simplyCover.jpg" alt="" /></span></td>
+							<td>Alessandro Fadini, Josiah Boornazian "Simply Begin Again"</td>
+							<td>Freshsound New Talent, 2020</td>
+							<td>
+								<div class="likebutton">
+									<a href="https://www.freshsoundrecords.com/alessandro-fadini-josiah-boornazian-albums/51381-simply-begin-again.html"> purchase here </a>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+					<tbody>
+						<tr>
 							<td><span class="discimg"><img src="/assets/images/dark1.jpg" alt="" /></span></td>
 							<td>Alessandro Fadini, "A Dark And Stormy Day"</td>
 							<td>Freshsound New Talent, 2016</td>
@@ -31,6 +43,7 @@ permalink: /music
 							</td>
 						</tr>
 					</tbody>
+
 				</table>
 			</div>
 			<h3>As Sideman</h3>
@@ -82,57 +95,50 @@ permalink: /music
 			</div>
 		</div>
 	</div>
-	<hr/>
+	<hr />
 	<div class="inner wrapper">
 		<h2>Exclusive Excerpts</h2>
-	<p>Here are some excerpts available only on this website:</p>
-	<div id="audiogallery">
+		<p>Here are some excerpts available only on this website:</p>
+		<div id="audiogallery">
 
-		{% for record in site.data.listen %}
+			{% for record in site.data.listen %}
 
-		<div class="albumtitle">
-			<h2>"{{ record.albumtitle }}"</h2>
-			<h3>{{ record.artist }}</h3>
-			<div class="album">
+			<div class="albumtitle">
+				<h2>"{{ record.albumtitle }}"</h2>
+				<h3>{{ record.artist }}</h3>
+				<div class="album">
 
-				<div class="personnel">
-					<p>
-						{% for musician in record.personnel %}
-						{{ musician.name }} on {{ musician.axe }} <br>
-						{% endfor %}
-					</p>
-					<img src="/assets/images/{{ record.albumimg }}" width="200" alt="Peace EP">
-				</div>
-
-				<div class="songs">
-					{% for song in record.songs %}
-					{% if song.play %}
-					<p>"{{ song.title }}"</p>
-					<div class="mp3player">
-						<audio controls>
-							<source src="assets/music/{{ song.src }}">
-						</audio>
+					<div class="personnel">
+						<p>
+							{% for musician in record.personnel %}
+							{{ musician.name }} on {{ musician.axe }} <br>
+							{% endfor %}
+						</p>
+						<img src="/assets/images/{{ record.albumimg }}" width="200" alt="Peace EP">
 					</div>
-					{% endif %}
-					{% endfor %}
+
+					<div class="songs">
+						{% for song in record.songs %}
+						{% if song.play %}
+						<p>"{{ song.title }}"</p>
+						<div class="mp3player">
+							<audio controls>
+								<source src="assets/music/{{ song.src }}">
+							</audio>
+						</div>
+						{% endif %}
+						{% endfor %}
+					</div>
 				</div>
 			</div>
+			<hr />
+			{% endfor %}
+
+			<h3>Soundcloud</h3>
+			<p>You can listen to other excerpts on Soundcloud: </p>
+			<p>
+			<div class="likebutton"><a href="https://soundcloud.com/alessandro-fadini" class="icon fa-soundcloud"><span class="label">Take me to Soundcloud</span>
+					<p>Take me to Soundcloud</p>
+				</a></div>
+			<hr />
 		</div>
-		<hr />
-		{% endfor %}
-
-		<h3>Soundcloud</h3>
-		<p>You can listen to other excerpts on Soundcloud: </p>
-		<p>
-		<div class="likebutton"><a href="https://soundcloud.com/alessandro-fadini" class="icon fa-soundcloud"><span class="label">Take me to Soundcloud</span>
-				<p>Take me to Soundcloud</p>
-			</a></div>
-		</p>
-
-		<hr />
-
-
-
-
-
-	</div>
