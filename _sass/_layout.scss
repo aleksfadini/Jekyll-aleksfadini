@@ -743,20 +743,15 @@ body.is-loading #banner:after {
   }
 }
 /**** old version
-
 .row {
     width: 100%;
-
     .image {
         width: 100%;
-
         img {
-
             width: 100%;
             height: auto;
         }
     }
-
     .excerpt {
         box-sizing: border-box;
         width: 100%;
@@ -764,24 +759,18 @@ body.is-loading #banner:after {
         background: rgba(200, 200, 200, 1);
         text-align: center;
         padding: $spacing-unit ($spacing-unit / 2);
-
         h2 {
             letter-spacing: 2px;
             text-transform: uppercase;
             font-weight: bold;
         }
-
         a {
             color: white;
             text-decoration: underline;
         }
     }
-
-
-
     @include media-query($desktop) {
         height: 340px;
-
         .image {
             display: block;
             float: left;
@@ -789,34 +778,27 @@ body.is-loading #banner:after {
             height: 100%;
             display: flex;
             align-items: center
-
             a {
                 display: flex;
                 align-items: center
-
                 img {
                 margin: 0;
                 max-width: 50%;
                 height: auto;
-
                 }
             }
         }
-
         .excerpt {
             display: block;
             float: left;
             width: 60%;
             height: 100%;
         }
-
         &.second .image {
             float: right;
         }
     }
 }
-
-
 *****/
 /****
 *
@@ -1139,33 +1121,6 @@ hr {
 .inner.wrapper {
   max-width: 800px;
   text-align: center;
-
-  a {
-    padding: 0.1em;
-    border-style: solid;
-    border-radius: 4px;
-    // border-color: #bbb;
-    border-width: 1px;
-    // background-color: #ededed;
-    border-color: #ddd;
-    background-color: #eee;
-    // background-color: #fbfbfb;
-    box-shadow: 0 0 3px 0 #ccc;
-  }
-
-  a:hover {
-    border-style: solid;
-    border-radius: 4px;
-    border-color: #ddd;
-    border-width: 1px;
-    background-color: #fff;
-    // box-shadow: 0px 0px 10px 0px #999;
-    box-shadow: 0 10px 9px 1px #ccc;
-    -webkit-transition: 0.5s ease-in-out;
-    -moz-transition: 0.5s ease-in-out;
-    -o-transition: 0.5s ease-in-out;
-    -ms-transition: 0.5s ease-in-out;
-  }
 
   .bio p {
     font-size: 0.8em;
@@ -1812,9 +1767,125 @@ FOTO GALLERY PAGE
     max-height: 3em;
   }
 }
-// #imageGallery {
-// a {
-// background-color: transparent;
-// border-style: none;
-// }
+// making likebutton work within wrapper 5 in general
+
+.inner.wrapper, .wrapper5 {
+  a {
+    padding: 0.1em;
+    border-style: solid;
+    border-radius: 4px;
+    // border-color: #bbb;
+    border-width: 1px;
+    // background-color: #ededed;
+    border-color: #ddd;
+    background-color: #eee;
+    // background-color: #fbfbfb;
+    box-shadow: 0 0 3px 0 #ccc;
+  }
+
+  a:hover {
+    border-style: solid;
+    border-radius: 4px;
+    border-color: #ddd;
+    border-width: 1px;
+    background-color: #fff;
+    // box-shadow: 0px 0px 10px 0px #999;
+    box-shadow: 0 10px 9px 1px #ccc;
+    -webkit-transition: 0.5s ease-in-out;
+    -moz-transition: 0.5s ease-in-out;
+    -o-transition: 0.5s ease-in-out;
+    -ms-transition: 0.5s ease-in-out;
+  }
+
+  .likebutton {
+    padding: 0.5em;
+    border-style: solid;
+    border-radius: 4px;
+    border-color: #bbb;
+    border-width: 1px;
+    background-color: #fdfdfd;
+    box-shadow: 0 0 3px 0 #999;
+
+    a,
+    a:hover {
+      box-shadow: none;
+      border-color: none;
+      background-color: fff;
+      padding: 0.1em;
+      border-style: none;
+      border-radius: 4px;
+      border-width: 1px;
+      border-color: transparent;
+      // border-color: inherit;
+      background-color: transparent;
+      // background-color: inherit;
+      box-shadow: none;
+    }
+  }
+
+  .likebutton:hover {
+    border-style: solid;
+    border-radius: 4px;
+    border-color: #bbb;
+    border-width: 1px;
+    background-color: #bbb;
+    box-shadow: 0 0 10px 0 #999;
+    -webkit-transition: 0.5s ease-in-out;
+    -moz-transition: 0.5s ease-in-out;
+    -o-transition: 0.5s ease-in-out;
+    -ms-transition: 0.5s ease-in-out;
+
+    a,
+    a:hover {
+      box-shadow: none;
+      border-color: none;
+      background-color: fff;
+      padding: 0.1em;
+      border-style: none;
+      border-radius: 4px;
+      border-width: 1px;
+      border-color: transparent;
+      // background-color: inherit;
+      background-color: transparent;
+      box-shadow: none;
+    }
+
+    a:hover {
+      -webkit-transition: 0.5s ease-in-out;
+      -moz-transition: 0.5s ease-in-out;
+      -o-transition: 0.5s ease-in-out;
+      -ms-transition: 0.5s ease-in-out;
+      color: white;
+    }
+
+    #footer {
+      a,
+      a:hover {
+        box-shadow: none;
+        border-color: none;
+        background-color: fff;
+        padding: 0.1em;
+        border-style: none;
+        border-radius: 4px;
+        border-width: 1px;
+        border-color: transparent;
+        // background-color: inherit;
+        background-color: transparent;
+        box-shadow: none;
+      }
+
+      a:hover {
+        -webkit-transition: 0.5s ease-in-out;
+        -moz-transition: 0.5s ease-in-out;
+        -o-transition: 0.5s ease-in-out;
+        -ms-transition: 0.5s ease-in-out;
+        color: white;
+      }
+    }
+  }
+}
+// horrible way to patch footer being put inside of wrapper5 just in mediapage for no reason (maybe due to the media js thing i dont understand)
+//
+// #footer .icons a {
+//   background-color: blue;
 // }
