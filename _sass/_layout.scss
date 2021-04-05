@@ -1307,7 +1307,8 @@ hr {
     background-color: #fdfdfd;
     box-shadow: 0 0 3px 0 #999;
 
-    a, a:hover {
+    a,
+    a:hover {
       box-shadow: none;
       border-color: none;
       background-color: fff;
@@ -1335,7 +1336,8 @@ hr {
     -o-transition: 0.5s ease-in-out;
     -ms-transition: 0.5s ease-in-out;
 
-    a, a:hover {
+    a,
+    a:hover {
       box-shadow: none;
       border-color: none;
       background-color: fff;
@@ -1348,6 +1350,7 @@ hr {
       background-color: transparent;
       box-shadow: none;
     }
+
     a:hover {
       -webkit-transition: 0.5s ease-in-out;
       -moz-transition: 0.5s ease-in-out;
@@ -1389,18 +1392,20 @@ hr {
 /**********************************
 FOTO GALLERY PAGE
 ***********************************/
-#fotogallery{
-    a, a:hover {
-      box-shadow: none;
-      border-color: transparent;
-      background-color: transparent;
-      padding: 0.1em;
-      border-style: none;
-      border-radius: 4px;
-      border-width: 1px;
-      box-shadow: none;
-    }
+#fotogallery {
+  a,
+  a:hover {
+    box-shadow: none;
+    border-color: transparent;
+    background-color: transparent;
+    padding: 0.1em;
+    border-style: none;
+    border-radius: 4px;
+    border-width: 1px;
+    box-shadow: none;
+  }
 }
+
 #fotogallery h3 {
   margin-top: 1.5em;
 }
@@ -1425,6 +1430,18 @@ FOTO GALLERY PAGE
   box-shadow: 0 0 10px 0 #000;
   display: block;
   border-radius: 4px;
+}
+
+#fotogallery ul li {
+  img:hover {
+    -o-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    box-shadow: 15px 15px 20px #aaa;
+    // box-shadow: 10px 10px 5px #888888;//This one is pretty good too!
+  }
 }
 
 #fotogallery a {
@@ -1795,10 +1812,9 @@ FOTO GALLERY PAGE
     max-height: 3em;
   }
 }
-
 // #imageGallery {
-  // a {
-    // background-color: transparent;
-    // border-style: none;
-  // }
+// a {
+// background-color: transparent;
+// border-style: none;
+// }
 // }
