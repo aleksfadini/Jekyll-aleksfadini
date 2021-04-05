@@ -1,10 +1,15 @@
 ---
 layout: regularpage
 title: A Case Against Social Medias
-little-headerimage: /assets/images/pixelated.jpg
+little-headerimage: /assets/images/bwCup.jpg
 permalink: /social/
 published: true
 ---
+
+## Contact me
+You can write to me using the email in the footer, or even my personal email, which is aleksfadini followed by the usual gmail dot com
+
+I *do not* use social medias, and I really would like feedback via email, which is a *decentralized* platform. I care so much about it, that I will explain my reasons in great detail on this page.
 
 # A Case Against Social Medias
 
@@ -25,13 +30,9 @@ A musician I always admired artistically who also made the choice to avoid all s
 We collaborated extensively and I am fortunate to consider him a close friend of mine.
 
 # Other ways to communicate: email!
-I see email as a superior way of comunication instead of social medias, and I answer most of the emails I receive, even if it takes a lot of time (and you might expect a delay sometime).
+I see email as a superior way of comunication compared to social medias, and I answer most of the emails I receive, even if it takes a lot of time (and you might expect a delay sometime).
 In particular, I answer all emails that come from:
 - anybody offering feedback or asking a question
 - musicians and possible collaborators
 - anyone involved in the digital art world
 - anyone using SpaceEars, the one and only ear-training roguelike game that I am committed to improve every day
-
-## Contact me
-You can write to me using the email in the footer, or even my personal email, which is aleksfadini followed by the usual gmail.com
-If you made it to here you deserve it...
