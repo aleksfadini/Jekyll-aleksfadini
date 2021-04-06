@@ -91,8 +91,6 @@ h1, h2, h3,  {
     margin: 1em 1em 1em 1em;
     text-transform: uppercase;
       text-shadow: 1px 1px 2px #333, 0 0 25px #ddd, 0 0 5px #aaa;
-
-
     h4, h5, h6 {
 
     font-weight: $base-font-weight;
@@ -187,6 +185,17 @@ pre {
     padding-right: $spacing-unit;
     padding-left: $spacing-unit;
     @extend %clearfix;
+
+@include media-query($mobile) {
+
+        padding-right: $spacing-unit / 8;
+        padding-left: $spacing-unit / 8;
+    }
+
+@include media-query($on-palm) {
+        padding-right: $spacing-unit / 4;
+        padding-left: $spacing-unit / 4;
+    }
 
     @include media-query($on-laptop) {
         max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));

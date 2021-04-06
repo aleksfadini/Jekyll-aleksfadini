@@ -378,8 +378,11 @@
     h1 {
       padding: 0.1rem;
       margin-bottom: 0;
-      font-size: 1.2em;
+      font-size: 1em;
       color: $slightly-transparent-white;
+      @include media-query($mobile) {
+        font-size: 1.2em;
+      }
       @include media-query($on-palm) {
         padding: 0.5rem;
         margin-bottom: 0;
@@ -468,7 +471,7 @@ body.is-loading #banner:after {
   }
 
   h1 {
-    font-size: 1.4em;
+    font-size: 1em;
   }
   background-position: center;
   background-repeat: no-repeat;
@@ -527,7 +530,16 @@ body.is-loading #banner:after {
 
       h1 {
         margin-bottom: 0;
-        font-size: 2.5em;
+        font-size: 1em;
+        @include media-query($mobile) {
+          font-size: 1.2em;
+        }
+        @include media-query($on-palm) {
+          font-size: 1.8em;
+        }
+        @include media-query($desktop) {
+          font-size: 3.4em;
+        }
       }
     }
   }
@@ -645,7 +657,7 @@ body.is-loading #banner:after {
       }
     }
   }
-  background: rgba(200, 200, 200, 0.75);
+  background: rgba(200, 200, 200, 1);
   z-index: 15;
   position: fixed;
   height: 40px;
@@ -654,15 +666,22 @@ body.is-loading #banner:after {
   box-shadow: 0 2px 2px #9a9898;
 
   .title-on-menu {
-    left: 1.25em;
+    left: 0;
     position: absolute;
     letter-spacing: 0.2em;
+    letter-spacing: -2px;
     margin-top: -2em;
 
     h1 a {
       display: block;
       line-height: 40px;
-      font-size: 0.55em;
+      font-size: 0.25em;
+      @include media-query($mobile) {
+        font-size: 0.35em;
+      }
+      @include media-query($on-palm) {
+        font-size: 0.45em;
+      }
     }
   }
 
@@ -678,8 +697,21 @@ body.is-loading #banner:after {
         display: inline-block;
         height: 40px;
         vertical-align: top;
-        width: 2em;
+        width: 2.5em;
         margin-right: 20px;
+        text-shadow: 0 1px 1px black;
+        -webkit-filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, 1));
+        filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, 1));
+      }
+
+      &:hover:after {
+        -webkit-filter: drop-shadow(4px 4px 3px rgba(0, 0, 0, .7));
+        filter: drop-shadow(4px 4px 3px rgba(0, 0, 0, .7));
+        -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+        transition: all 0.3s ease;
       }
 
       #menu-text {
@@ -703,10 +735,19 @@ body.is-loading #banner:after {
   -o-transition: all 0.3s ease-in-out;
   -ms-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  $side-menu-width: 14rem;
+  $side-menu-width: 8rem;
+  @include media-query($mobile) {
+    $side-menu-width: 12rem;
+  }
+  @include media-query($on-palm) {
+    $side-menu-width: 14rem;
+  }
+  @include media-query($on-laptop) {
+    $side-menu-width: 16rem;
+  }
   padding: 1rem;
   width: $side-menu-width;
-  background: rgba(34, 34, 34, 0.9);
+  background: rgba(34, 34, 34, 1);
   padding-top: 1rem;
   z-index: 100000;
   height: 100vh;
@@ -740,11 +781,11 @@ body.is-loading #banner:after {
         color: white;
         // text-decoration: none;
         text-shadow: 0 4px 4px #000000, 0 4px 4px #000000, 0 4px 4px #000000, 0 4px 4px #000000, 0 4px 4px #000000, 0 4px 4px #000000;
-        -webkit-transition: all 0.4s ease;
-        -moz-transition: all 0.4s ease;
-        -o-transition: all 0.4s ease;
-        -ms-transition: all 0.4s ease;
-        transition: all 0.4s ease;
+        -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+        transition: all 0.3s ease;
       }
 
       a {
@@ -752,11 +793,11 @@ body.is-loading #banner:after {
         color: #bbb;
         // text-decoration: none;
         text-shadow: 0 0 3px black;
-        -webkit-transition: all 0.4s ease;
-        -moz-transition: all 0.4s ease;
-        -o-transition: all 0.4s ease;
-        -ms-transition: all 0.4s ease;
-        transition: all 0.4s ease;
+        -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+        transition: all 0.3s ease;
       }
     }
   }
@@ -1086,7 +1127,19 @@ hr {
 .wrapper5 {
   background-color: #ffffff;
   color: $wrapper-text-color;
-  margin: 2rem;
+  // margin: 2rem;
+  @include media-query($mobile) {
+    padding: 0.2rem;
+    margin: 0.2rem;
+  }
+  @include media-query($on-palm) {
+    margin: 1rem;
+    padding: 1rem;
+  }
+  @include media-query($on-laptop) {
+    margin: 2rem;
+    padding: 2rem;
+  }
 }
 /* more buttons */
 .adbutton {
@@ -1140,6 +1193,10 @@ hr {
 .inner.wrapper {
   max-width: 800px;
   text-align: center;
+
+  h1 {
+    font-size: 16px;
+  }
   @include media-query($mobile) {
     h1 {
       font-size: 16px;
@@ -1479,6 +1536,19 @@ FOTO GALLERY PAGE
 *     audiogallery
 */
 #audiogallery {
+  @include media-query($mobile) {
+    padding: 0;
+    margin: 0;
+  }
+  @include media-query($on-palm) {
+    margin: 1rem;
+    padding: 1rem;
+  }
+  @include media-query($on-laptop) {
+    margin: 2rem;
+    padding: 2rem;
+  }
+
   .albumtitle {
     background: rgba(220,220,220,1);
     text-align: center;
@@ -1529,18 +1599,29 @@ FOTO GALLERY PAGE
       }
 
       .songs {
+        @include media-query($mobile) {
+          padding: 0;
+          margin: 0;
+        }
+        @include media-query($on-palm) {
+          margin: 1rem;
+          padding: 1rem;
+        }
+        @include media-query($on-laptop) {
+          margin: 2rem;
+          padding: 2rem;
+        }
         -webkit-flex: auto;
         flex: auto;
-        margin: 1em;
-
+        // margin: 1em;
         .mp3player {
-          margin: 0.5em;
+          margin: 0.5rem;
         }
 
         p {
-          margin: 1em auto 0.5em;
+          margin: 1rem auto 0.5rem;
           text-transform: uppercase;
-          font-size: 1em;
+          font-size: 1rem;
         }
       }
     }
@@ -1805,7 +1886,6 @@ FOTO GALLERY PAGE
 
 .inner.wrapper,
 .wrapper5 {
-
   @include media-query($mobile) {
     h1 {
       font-size: 16px;
@@ -1816,6 +1896,7 @@ FOTO GALLERY PAGE
       font-size: 36px;
     }
   }
+
   a {
     padding: 0.1em;
     border-style: solid;
