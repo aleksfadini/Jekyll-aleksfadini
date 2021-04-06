@@ -31,6 +31,12 @@
     line-height: 56px;
     letter-spacing: -1px;
   }
+  @include media-query($mobile) {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 36px;
+    letter-spacing: -2px;
+  }
   margin-bottom: 0;
   float: left;
 
@@ -247,6 +253,9 @@
   line-height: 1;
   @include media-query($on-laptop) {
     font-size: 36px;
+    @include media-query($mobile) {
+      font-size: 16px;
+    }
   }
 }
 
@@ -399,7 +408,7 @@
     &::after {
       z-index: 10000;
       border-bottom: 5px solid transparent;
-      bottom: 7rem;
+      bottom: 8rem;
       @include media-query($on-palm) {
         bottom: 7.2rem;
       }
@@ -695,7 +704,7 @@ body.is-loading #banner:after {
   -ms-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   $side-menu-width: 14rem;
-  padding: 1rem 1rem;
+  padding: 1rem;
   width: $side-menu-width;
   background: rgba(34, 34, 34, 0.9);
   padding-top: 1rem;
@@ -728,10 +737,9 @@ body.is-loading #banner:after {
       a:active,
       a:hover {
         // text-shadow: 1px 4px 6px black 1px 4px 6px black 1px 4px 6px black 1px 4px 6px black
-
         color: white;
         // text-decoration: none;
-        text-shadow: 0px 4px 4px #000000, 0px 4px 4px #000000, 0px 4px 4px #000000, 0px 4px 4px #000000, 0px 4px 4px #000000, 0px 4px 4px #000000;
+        text-shadow: 0 4px 4px #000000, 0 4px 4px #000000, 0 4px 4px #000000, 0 4px 4px #000000, 0 4px 4px #000000, 0 4px 4px #000000;
         -webkit-transition: all 0.4s ease;
         -moz-transition: all 0.4s ease;
         -o-transition: all 0.4s ease;
@@ -743,7 +751,7 @@ body.is-loading #banner:after {
         // text-shadow: 1px 4px 6px black 1px 4px 6px black 1px 4px 6px black 1px 4px 6px black
         color: #bbb;
         // text-decoration: none;
-        text-shadow: 0px 0px 3px black;
+        text-shadow: 0 0 3px black;
         -webkit-transition: all 0.4s ease;
         -moz-transition: all 0.4s ease;
         -o-transition: all 0.4s ease;
@@ -1132,6 +1140,16 @@ hr {
 .inner.wrapper {
   max-width: 800px;
   text-align: center;
+  @include media-query($mobile) {
+    h1 {
+      font-size: 16px;
+    }
+  }
+  @include media-query($on-palm) {
+    h1 {
+      font-size: 36px;
+    }
+  }
 
   .bio p {
     font-size: 0.8em;
@@ -1418,7 +1436,7 @@ FOTO GALLERY PAGE
 */
 /** Start Coding Here **/
 #overlay {
-  background: rgba(0.1,0.1,0.1,0.90);
+  background: rgba(0.1,0.1,0.1,1);
   width: 100%;
   height: 100%;
   position: fixed;
@@ -1433,10 +1451,15 @@ FOTO GALLERY PAGE
   margin-top: 10vh;
   max-width: 40vh;
   max-height: 40vh;
-  box-shadow: 0 0 10px 1px #323232;
+  box-shadow: 0 0 10px 2px #eee;
+  // box-shadow: 0 0 6px 0px #eee,0 0 6px 0px #eee;
+  @include media-query($mobile) {
+    max-width: 50vh;
+    max-height: 50vh;
+  }
   @include media-query($on-palm) {
-    max-width: 80vh;
-    max-height: 80vh;
+    max-width: 60vh;
+    max-height: 60vh;
   }
   @include media-query($desktop) {
     max-width: 80vh;
@@ -1780,7 +1803,19 @@ FOTO GALLERY PAGE
 }
 // making likebutton work within wrapper 5 in general
 
-.inner.wrapper, .wrapper5 {
+.inner.wrapper,
+.wrapper5 {
+
+  @include media-query($mobile) {
+    h1 {
+      font-size: 16px;
+    }
+  }
+  @include media-query($on-palm) {
+    h1 {
+      font-size: 36px;
+    }
+  }
   a {
     padding: 0.1em;
     border-style: solid;
