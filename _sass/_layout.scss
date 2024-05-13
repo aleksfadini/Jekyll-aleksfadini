@@ -65,7 +65,7 @@
   @include media-query($on-palm) {
     position: absolute;
     top: 9px;
-    right: $spacing-unit / 2;
+    right: calc($spacing-unit / 2);
     background-color: $background-color;
     border: 1px solid $grey-color-light;
     border-radius: 5px;
@@ -119,7 +119,8 @@
   text-align: center;
   padding: 0 2% 0.7em;
   font-size: 1em;
-  text-shadow: 0 0 2px #000, 0 0 4px #000, 0 0 6px #000, 0 0 5px #000, 0 0 10px #000;
+  text-shadow: 0 0 2px #000, 0 0 4px #000, 0 0 6px #000, 0 0 5px #000,
+    0 0 10px #000;
   text-transform: none;
 }
 
@@ -156,7 +157,7 @@
 
 .footer-heading {
   font-size: 18px;
-  margin-bottom: $spacing-unit / 2;
+  margin-bottom: calc($spacing-unit / 2);
 }
 
 .contact-list,
@@ -168,14 +169,14 @@
 .footer-col-wrapper {
   font-size: 15px;
   color: $grey-color;
-  margin-left: -$spacing-unit / 2;
+  margin-left: -calc(#{$spacing-unit} / 2);
   @extend %clearfix;
 }
 
 .footer-col {
   float: left;
-  margin-bottom: $spacing-unit / 2;
-  padding-left: $spacing-unit / 2;
+  margin-bottom: calc($spacing-unit / 2);
+  padding-left: calc($spacing-unit / 2);
 }
 
 .footer-col-1 {
@@ -301,10 +302,26 @@
     background-size: cover;
   }
   /* background: linear-gradient(rgba(0, 0, 0, 0), #000), url('/assets/images/banner.jpg'); */
-  background-image: linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.9)), url("/assets/images/banner.jpg");
-  background-image: -moz-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.9)), url("/assets/images/banner.jpg");
-  background-image: -webkit-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.9)), url("/assets/images/banner.jpg");
-  background-image: -ms-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.9)), url("/assets/images/banner.jpg");
+  background-image: linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9)),
+    url("/assets/images/banner.jpg");
+  background-image: -moz-linear-gradient(
+      top,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0.9)
+    ),
+    url("/assets/images/banner.jpg");
+  background-image: -webkit-linear-gradient(
+      top,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0.9)
+    ),
+    url("/assets/images/banner.jpg");
+  background-image: -ms-linear-gradient(
+      top,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0.9)
+    ),
+    url("/assets/images/banner.jpg");
 
   .fadecard {
     position: absolute;
@@ -336,7 +353,7 @@
     margin: auto;
     transform: translateY(-50%);
     text-transform: uppercase;
-    color: #FFF;
+    color: #fff;
     text-align: center;
     letter-spacing: 0.75em;
 
@@ -361,7 +378,7 @@
     margin: auto;
     transform: translateY(-50%);
     text-transform: uppercase;
-    color: #FFF;
+    color: #fff;
     text-align: center;
     letter-spacing: 0.75em;
 
@@ -395,7 +412,7 @@
     &::before {
       z-index: 10000;
       box-sizing: border-box;
-      content: '';
+      content: "";
       position: absolute;
       width: 0;
       height: 0;
@@ -437,7 +454,7 @@
     margin: auto;
     transform: translateY(-50%);
     text-transform: uppercase;
-    color: #FFF;
+    color: #fff;
     text-align: center;
     letter-spacing: 0.75em;
   }
@@ -510,12 +527,13 @@ body.is-loading #banner:after {
     top: 50%;
     transform: translateY(-50%);
     text-transform: uppercase;
-    color: #FFF;
+    color: #fff;
     text-align: center;
     letter-spacing: 0.75em;
 
     h4 {
-      text-shadow: 0 0 2px #000, 0 0 4px #000, 0 0 6px #000, 0 0 5px #000, 0 0 10px #000;
+      text-shadow: 0 0 2px #000, 0 0 4px #000, 0 0 6px #000, 0 0 5px #000,
+        0 0 10px #000;
       font-size: 1.5rem;
     }
 
@@ -553,33 +571,53 @@ body.is-loading #banner:after {
   z-index: 1;
   top: 0;
   left: 0;
-  background: linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0), rgba(0,0,0,0.9));
-  background: -moz-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0), rgba(0,0,0,0.9));
-  background: -webkit-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0), rgba(0,0,0,0.9));
-  background: -ms-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0), rgba(0,0,0,0.9));
+  background: linear-gradient(
+    top,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.9)
+  );
+  background: -moz-linear-gradient(
+    top,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.9)
+  );
+  background: -webkit-linear-gradient(
+    top,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.9)
+  );
+  background: -ms-linear-gradient(
+    top,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.9)
+  );
 }
 
 .invisiblestart1 {
   opacity: 0;
-};
+}
 
 .visiblestart1 {
   transition: opacity 0.5s ease-in-out;
   -moz-transition: opacity 0.5s ease-in-out;
   -webkit-transition: opacity 0.5s ease-in-out;
   opacity: 1;
-};
+}
 
 .invisiblestart2 {
   opacity: 0;
-};
+}
 
 .visiblestart2 {
   transition: opacity 0.5s ease-in-out;
   -moz-transition: opacity 0.5s ease-in-out;
   -webkit-transition: opacity 0.5s ease-in-out;
   opacity: 1;
-};
+}
 
 #morearrow {
   width: 80px;
@@ -590,7 +628,7 @@ body.is-loading #banner:after {
   background: rgba(0, 0, 0, 0);
   position: absolute;
   text-transform: uppercase;
-  color: #FFF;
+  color: #fff;
   text-align: center;
   letter-spacing: 0.2em;
   font-size: 0.8em;
@@ -640,7 +678,7 @@ body.is-loading #banner:after {
 
   a {
     text-decoration: none;
-    color: #FFF;
+    color: #fff;
     opacity: 1;
   }
   transition: background 0.45s ease;
@@ -693,7 +731,7 @@ body.is-loading #banner:after {
         background-image: url("/assets/icons/bars.svg");
         background-position: center;
         background-repeat: no-repeat;
-        content: '';
+        content: "";
         display: inline-block;
         height: 40px;
         vertical-align: top;
@@ -705,8 +743,8 @@ body.is-loading #banner:after {
       }
 
       &:hover:after {
-        -webkit-filter: drop-shadow(4px 4px 3px rgba(0, 0, 0, .7));
-        filter: drop-shadow(4px 4px 3px rgba(0, 0, 0, .7));
+        -webkit-filter: drop-shadow(4px 4px 3px rgba(0, 0, 0, 0.7));
+        filter: drop-shadow(4px 4px 3px rgba(0, 0, 0, 0.7));
         -webkit-transition: all 0.3s ease;
         -moz-transition: all 0.3s ease;
         -o-transition: all 0.3s ease;
@@ -715,7 +753,7 @@ body.is-loading #banner:after {
       }
 
       #menu-text {
-        color: #FFF;
+        color: #fff;
         line-height: 40px;
         margin-right: 5px;
         display: none;
@@ -766,8 +804,8 @@ body.is-loading #banner:after {
     letter-spacing: 0.1em;
 
     li {
-      margin-top: $spacing-unit / 4;
-      padding-top: $spacing-unit / 4;
+      margin-top: calc($spacing-unit / 4);
+      padding-top: calc($spacing-unit / 4);
       text-shadow: 0 0 4px #333;
 
       &:not(:first-child) {
@@ -780,7 +818,8 @@ body.is-loading #banner:after {
         // text-shadow: 1px 4px 6px black 1px 4px 6px black 1px 4px 6px black 1px 4px 6px black
         color: white;
         // text-decoration: none;
-        text-shadow: 0 4px 4px #000000, 0 4px 4px #000000, 0 4px 4px #000000, 0 4px 4px #000000, 0 4px 4px #000000, 0 4px 4px #000000;
+        text-shadow: 0 4px 4px #000000, 0 4px 4px #000000, 0 4px 4px #000000,
+          0 4px 4px #000000, 0 4px 4px #000000, 0 4px 4px #000000;
         -webkit-transition: all 0.3s ease;
         -moz-transition: all 0.3s ease;
         -o-transition: all 0.3s ease;
@@ -818,7 +857,7 @@ body.is-loading #banner:after {
         color: white;
         background: rgba(200, 200, 200, 1);
         text-align: center;
-        padding: $spacing-unit ($spacing-unit / 2);
+        padding: calc($spacing-unit / 2);
         h2 {
             letter-spacing: 2px;
             text-transform: uppercase;
@@ -891,7 +930,7 @@ body.is-loading #banner:after {
     color: white;
     background: rgba(200, 200, 200, 1);
     text-align: center;
-    padding: $spacing-unit ($spacing-unit / 2);
+    padding: calc($spacing-unit / 2);
 
     h2 {
       text-shadow: 0 0 8px #040404;
@@ -932,7 +971,7 @@ body.is-loading #banner:after {
     }
     color: white;
     text-align: center;
-    padding: $spacing-unit ($spacing-unit / 2);
+    padding: calc($spacing-unit / 2);
     background: rgba(150, 150, 150, 1);
 
     h2 {
@@ -1493,7 +1532,7 @@ FOTO GALLERY PAGE
 */
 /** Start Coding Here **/
 #overlay {
-  background: rgba(0.1,0.1,0.1,1);
+  background: rgba(0.1, 0.1, 0.1, 1);
   width: 100%;
   height: 100%;
   position: fixed;
@@ -1550,7 +1589,7 @@ FOTO GALLERY PAGE
   }
 
   .albumtitle {
-    background: rgba(220,220,220,1);
+    background: rgba(220, 220, 220, 1);
     text-align: center;
     border-radius: 3px;
     padding: 1em;
